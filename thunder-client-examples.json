@@ -1,0 +1,75 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "Tienda Joyas API",
+  "dateExported": "2024-12-02",
+  "version": "1.2",
+  "folders": [],
+  "requests": [
+    {
+      "name": "GET - Obtener todas las joyas (HATEOAS)",
+      "method": "GET",
+      "url": "http://localhost:3000/joyas",
+      "description": "Obtiene todas las joyas en formato HATEOAS sin parámetros"
+    },
+    {
+      "name": "GET - Joyas con límite y paginación",
+      "method": "GET",
+      "url": "http://localhost:3000/joyas?limits=3&page=1",
+      "description": "Obtiene 3 joyas de la primera página"
+    },
+    {
+      "name": "GET - Joyas ordenadas por stock ASC",
+      "method": "GET",
+      "url": "http://localhost:3000/joyas?limits=3&page=2&order_by=stock_ASC",
+      "description": "Ejemplo de la imagen 1 del desafío"
+    },
+    {
+      "name": "GET - Joyas ordenadas por precio DESC",
+      "method": "GET",
+      "url": "http://localhost:3000/joyas?limits=5&order_by=precio_DESC",
+      "description": "Obtiene 5 joyas ordenadas por precio descendente"
+    },
+    {
+      "name": "GET - Filtrar por precio y metal",
+      "method": "GET",
+      "url": "http://localhost:3000/joyas/filtros?precio_min=25000&precio_max=30000&categoria=aros&metal=plata",
+      "description": "Ejemplo de la imagen 2 del desafío"
+    },
+    {
+      "name": "GET - Filtrar solo por metal oro",
+      "method": "GET",
+      "url": "http://localhost:3000/joyas/filtros?metal=oro",
+      "description": "Filtra todas las joyas de oro"
+    },
+    {
+      "name": "GET - Filtrar por categoría collar",
+      "method": "GET",
+      "url": "http://localhost:3000/joyas/filtros?categoria=collar",
+      "description": "Filtra todas las joyas tipo collar"
+    },
+    {
+      "name": "GET - Filtrar precio menor a 20000",
+      "method": "GET",
+      "url": "http://localhost:3000/joyas/filtros?precio_max=20000",
+      "description": "Joyas con precio máximo de 20000"
+    },
+    {
+      "name": "GET - Filtrar precio mayor a 30000",
+      "method": "GET",
+      "url": "http://localhost:3000/joyas/filtros?precio_min=30000",
+      "description": "Joyas con precio mínimo de 30000"
+    },
+    {
+      "name": "GET - Joya específica por ID",
+      "method": "GET",
+      "url": "http://localhost:3000/joyas/joya/1",
+      "description": "Obtiene la joya con ID 1"
+    },
+    {
+      "name": "GET - Documentación raíz",
+      "method": "GET",
+      "url": "http://localhost:3000/",
+      "description": "Obtiene la documentación de la API"
+    }
+  ]
+}
